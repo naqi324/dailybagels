@@ -17,7 +17,8 @@ module.exports = {
     phoneNum: {
       type: 'string',
       required: true,
-      unique: true
+      unique: true,
+      index: true
     },
     activated:{
       type: 'boolean',

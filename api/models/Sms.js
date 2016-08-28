@@ -21,7 +21,8 @@ module.exports = {
     smsURL: {
       type: 'string',
       required: true,
-      unique: true
+      unique: true,
+      index: true
     },
     smsMsg:{
       type: 'string',
@@ -29,5 +30,5 @@ module.exports = {
       defaultsTo: 'woof'
     }
   }
-  
+
 };

@@ -11,7 +11,9 @@
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <!--STYLES-->
   <link rel="stylesheet" href="/styles/main.css">
+  <!--STYLES END-->
   <!--[if lte IE 8]><link rel=stylesheet href="css/ie.css"><![endif]-->
   <script src="/js/dependencies/sails.io.js"></script>
   <script src="/js/vendor/modernizr.js"></script>
@@ -19,64 +21,19 @@
 </head>
 
 <body>
-  <div class="level level-hero hero-home has-hint">
+  <%- body %>
 
-    <div class="hero-overlay visible-lg"></div>
-    <video loop id="bg-video" class="fullscreen-video">
-      <source src="/videos/kitty.webm" type="video/webm">
-      <source src="/videos/kitty.mp4" type="video/mp4">
-    </video>
-
-    <div class="container full-height">
-      <div class="v-align-parent">
-        <div class="v-center">
-          <div class="row">
-            <div class="col-xs-10 col-sm-6">
-              <h1 class="mb-10 heading">Bagels.<span>Every Day.</span></h1>
-            </div>
-          </div>
-          <div>
-            <a class="btn btn-prepend" href="#signup_dose">
-              <i class="prepended icon-append-iphone"></i>Sign Up
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hint-arrow"></div>
-    </div>
-  </div>
-
-  <div class="level level-outro text-center">
-    <div class="container">
-      <form class="contact" method="post" action="/" accept-charset="UTF-8">
-        <div class="h2 mb-20" id="signup_dose">Get a daily dose of Bagels.</div>
-        <p class="mb-35">Straight to your phone.</p>
-        <div class="btn-append">
-          <input id="phone_us" type="tel" class="text phoneNumber" name="tel" placeholder="Phone number" required>
-          <input id="signup" type="submit" class="submit appended" value="submit">
-        </div>
-      </form>
-    </div>
-
-  </div>
-  <div class="footer text-center">
-    <p class="fmenu">
-      <a href="mai&#108;to&#58;su&#37;&#55;0&#64;dail&#121;%6&#50;&#37;&#54;&#49;&#103;&#101;l%&#55;3&#46;%&#54;3%&#54;Fm">WOOF</a>
-    </p>
-  </div>
   <!--TEMPLATES-->
   
   <!--TEMPLATES END-->
-  <!--SCRIPTS-->
-  
-  <!--SCRIPTS END-->
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--SCRIPTS-->
   <script src="/js/jquery.maskedinput.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <!--<script src="/js/dropdown.js"></script>-->
-  <script src="/js/modal.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/signup.js"></script>
+  <!--SCRIPTS END-->
 
   <script>
     (function(i, s, o, g, r, a, m) {
