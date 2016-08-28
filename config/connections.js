@@ -56,14 +56,6 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  dailybagelsDb: {
-     adapter: 'sails-mongo',
-     host: '192.184.94.50',
-     port: 37018,
-     user: 'mrb', //optional
-     password: 'BsxAFQZa*PmaNVr3scudriU]79EMYL', //optional
-     database: 'dailybagels' //optional
-  }
 
   /***************************************************************************
   *                                                                          *
