@@ -1,14 +1,15 @@
 /* @flow */
-$(document).ready(function(){
-
+$(document).ready(function() {
   $("#signup").click(function() {
     var phoneNum = $("#phone_us").val();
-    window.alert(phoneNum);
-    /*
+
     $.post(
-      window.alert(phoneNum),
+      '/signup', {
+        phoneNum: phoneNum
+      },
+      window.alert(phoneNum)
     ).fail(function(res) {
       alert("Error: " + res.getResponseHeader("error"));
-    });*/
+    }); 
   });
 });

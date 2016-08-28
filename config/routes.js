@@ -34,9 +34,15 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'static/index'
-  }
+    //view: 'static/index',
+    controller: 'main',
+    action: 'index'
+  },
 
+  '/signup' : {
+       controller: 'main',
+       action: 'signup'
+  }
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

@@ -1,3 +1,4 @@
+/* @flow */
 /**
  * Sms.js
  *
@@ -8,7 +9,25 @@
 module.exports = {
 
   attributes: {
-
+    id: {
+      type: 'integer',
+      primaryKey: true,
+      autoIncrement: true
+    },
+    smsDate: {
+      type: 'date',
+      required: true
+    },
+    smsURL: {
+      type: 'string',
+      required: true,
+      unique: true
+    },
+    smsMsg:{
+      type: 'string',
+      required: true,
+      defaultsTo: 'woof'
+    }
   }
+  
 };
-
