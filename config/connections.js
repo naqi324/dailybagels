@@ -28,9 +28,9 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
+  // localDiskDb: {
+  //  adapter: 'sails-disk'
+  //},
 
   /***************************************************************************
   *                                                                          *
@@ -63,7 +63,7 @@ module.exports.connections = {
      user: 'mrb', //optional
      password: 'BsxAFQZa*PmaNVr3scudriU]79EMYL', //optional
      database: 'dailybagels' //optional
-  // },
+  }
 
   /***************************************************************************
   *                                                                          *
