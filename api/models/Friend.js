@@ -15,7 +15,7 @@ module.exports = {
       autoIncrement: true
     },
     phoneNum: {
-      type: 'integer',
+      type: 'string',
       required: true,
       unique: true
     },

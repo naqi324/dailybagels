@@ -11,23 +11,26 @@ module.exports = {
     res.view();
   },
   signup: function(req, res) {
-    var phoneNum = req.param("phoneNum");
-    Friend.findByPhoneNum(phoneNum).done(function(err, usr) {
+    var phoneNum = req.param('phoneNum');
+    Friend.findOne({phoneNum: phoneNum}, function(err, usr) {
       if (err) {
+        res.set('error', 'DB Error');
         res.send(500, {
-          error: "DB Error"
+          error: 'DB Error'
         });
       } else if (usr) {
+        res.set('error', 'Phone number already registered');
         res.send(400, {
-          error: "Phone number already registered"
+          error: 'Phone number already registered'
         });
       } else {
         Friend.create({
           phoneNum: phoneNum
-        }).done(function(error, phoneNum) {
+        }).exec(function(error, phoneNum) {
           if (error) {
+            res.set('error', 'DB Error');
             res.send(500, {
-              error: "DB Error"
+              error: 'DB Error'
             });
           } else {
             req.session.user = phoneNum;
