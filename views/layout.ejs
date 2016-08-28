@@ -1,236 +1,96 @@
 <!DOCTYPE html>
 <!--[if lte IE 9]><html class="no-js is-ie"><![endif]-->
-<!--[if gt IE 8]><!--><html class=no-js><!--<![endif]-->
-
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta name="description" content="The Daily Bagels">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>The Daily Bagels</title>
+  <title>Daily Bagels</title>
 
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
-  <!--
-        Stylesheets and Preprocessors
-        ==============================
-
-        You can always bring in CSS files manually with `<link>` tags, or asynchronously
-        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
-        of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-        By default, stylesheets from your `assets/styles` folder are included
-        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
-        are supported. In production, your styles will be minified and concatenated into
-        a single file.
-
-        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Change the order of your CSS files
-            + Import stylesheets from other directories
-            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
-    -->
-
-  <!--STYLES-->
-  
-  <!--STYLES END-->
-
-  <link rel=stylesheet href="/styles/main.css">
-<!--[if lte IE 8]>
-<link rel=stylesheet href="css/ie.css">
-<![endif]-->
+  <link rel="stylesheet" href="/styles/main.css">
+  <!--[if lte IE 8]><link rel=stylesheet href="css/ie.css"><![endif]-->
   <script src="/js/dependencies/sails.io.js"></script>
   <script src="/js/vendor/modernizr.js"></script>
   <script src="/js/vendor/respond.min.js"></script>
-
-
 </head>
 
 <body>
   <div class="level level-hero hero-home has-hint">
 
-
     <div class="hero-overlay visible-lg"></div>
-
-    <video loop id=bg-video class=fullscreen-video>
-      <source src="/videos/sleepin.webm" type="video/webm">
-      <source src="/videos/sleepin.mp4" type="video/mp4">
-
+    <video loop id="bg-video" class="fullscreen-video">
+      <source src="/videos/kitty.webm" type="video/webm">
+      <source src="/videos/kitty.mp4" type="video/mp4">
     </video>
 
     <div class="container full-height">
-      <div class=v-align-parent>
-        <div class=v-center>
+      <div class="v-align-parent">
+        <div class="v-center">
           <div class="row">
             <div class="col-xs-10 col-sm-6">
-              <h1 class="mb-10 heading">Your Beagle. <span>Reinvented.</span></h1>
-              <div class="subheading mb-20">Cheese.<br class=hidden-xs>More cheese.</div>
+              <h1 class="mb-10 heading">Bagels.<span>Every Day.</span></h1>
             </div>
           </div>
           <div>
-            <a class="btn btn-prepend" href="#">
+            <a class="btn btn-prepend" href="#signup_dose">
               <i class="prepended icon-append-iphone"></i>Sign Up
             </a>
           </div>
         </div>
       </div>
-      <div class=hint-arrow></div>
+      <div class="hint-arrow"></div>
     </div>
-  </div>
-
-  <div class="level level-img-right">
-
-    <div class="container xs-mb-30">
-      <img class=img-right-sprite src="/images/v2/iphone-bg-lg.min.png" alt>
-      <div class="row mb-60 xs-mb-20">
-        <div class="col-sm-6 col-lg-offset-1 col-lg-5">
-          <h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Details</h1>
-          <h2 class="w-300 color-dark mb-10">All what you want in your phone</h2>
-          <p class=xs-mw>Now with Appi you have it on your fingertips.
-        </div>
-      </div>
-
-    <div class="visible-xs xs-mw xs-mb-40">
-      <img src="/images/v2/iphone-mobile.min.png" alt>
-    </div>
-
-      <div class="row mb-60 xs-mb-20">
-        <div class="col-sm-1 col-lg-offset-1">
-          <i class="icon icon-globe"></i>
-        </div>
-        <div class="col-sm-4 col-md-3">
-          <h3 class="mb-15">Worldwide</h3>
-          <p class="smaller xs-mw">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-        </div>
-      </div>
-
-      <div class="row mb-60 xs-mb-20">
-        <div class="col-sm-1 col-lg-offset-1">
-          <i class="icon icon-eye"></i>
-        </div>
-        <div class="col-sm-4 col-md-3">
-          <h3 class="mb-15">Privacy</h3>
-          <p class="smaller xs-mw">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-1 col-lg-offset-1">
-          <i class="icon icon-bubble"></i>
-        </div>
-        <div class="col-sm-4 col-md-3">
-          <h3 class="mb-15">Social Integration</h3>
-          <p class="smaller xs-mw">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <div class="level level-outro text-center">
-    <div class=container>
-
-      <form class=contact method=get action="/" accept-charset="UTF-8">
-
-        <div class="h2 mb-20">Available on the <br class=visible-xs-block> App Store</div>
-        <p class="mb-35">Enter your phone number and we’ll send a link to your iPhone
-
-        <div class="btn-append dropdown-prepend">
-
-          <div class=dropdown>
-            <button class="btn btn-default dropdown-toggle" type="button" id="f1" data-toggle="dropdown" aria-expanded="true">
-            <span id=option-value-f1>US (+1)</span>
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" data-displaytarget="#option-value-f1" data-inputtarget=".f1-target" role="menu" aria-labelledby="f1">
-              <li role="presentation" data-placeholder="US ( +1)" data-value="1" class=disabled>US ( +1)</li>
-            </ul>
-          </div>
-
-          <!-- actual select here -->
-          <select name="country-code" class="sr-only f1-target countryCode">
-            <option selected value="1">US (+1)</option>
-          </select>
-
-          <input type=tel class="text phoneNumber" name="tel" placeholder="Phone number" required>
-
-          <input type=submit class="submit appended" value=submit>
-
+    <div class="container">
+      <form class="contact" method="get" action="/" accept-charset="UTF-8">
+        <div class="h2 mb-20" id="signup_dose">Get a daily dose of Bagels.</div>
+        <p class="mb-35">Directly on your phone.</p>
+        <div class="btn-append">
+          <input id="phone_us" type="tel" class="text phoneNumber" name="tel" placeholder="Phone number" required>
+          <input type="submit" class="submit appended" value="submit">
         </div>
-
       </form>
     </div>
 
-
   </div>
   <div class="footer text-center">
-  <p class="fmenu">
-    <a href="index.html">HOME</a> | <a href="about.html">ABOUT</a>
-  </p>
-
+    <p class="fmenu">
+      <a href="mai&#108;to&#58;su&#37;&#55;0&#64;dail&#121;%6&#50;&#37;&#54;&#49;&#103;&#101;l%&#55;3&#46;%&#54;3%&#54;Fm">WOOF</a>
+    </p>
   </div>
+  <!--TEMPLATES-->
 
+  <!--TEMPLATES END-->
+  <!--SCRIPTS-->
 
+  <!--SCRIPTS END-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-
+  <script src="/js/jquery.maskedinput.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-	<script src="/js/dropdown.js"></script>
-	<script src="/js/main.js"></script>
+  <!--<script src="/js/dropdown.js"></script>-->
+  <script src="/js/modal.js"></script>
+  <script src="/js/main.js"></script>
 
-    <!--
-        Client-side Templates
-        ========================
-
-        HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
-
-        By default, your Gruntfile is configured to automatically load and precompile
-        client-side JST templates in your `assets/templates` folder, then
-        include them here automatically (between TEMPLATES and TEMPLATES END).
-
-        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
-            + Internationalize your client-side templates using a server-side
-              stringfile before they're served.
-    -->
-
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
-
-      <!--
-
-      Client-side Javascript
-      ========================
-
-      You can always bring in JS files manually with `script` tags, or asynchronously
-      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
-      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-      By default, files in your `assets/js` folder are included here
-      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
-      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
-      and concatenated into a single file.
-
-      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-      For example, here are a few things you could do:
-
-          + Change the order of your scripts
-          + Import scripts from other directories
-          + Use a different preprocessor, like TypeScript
-
-    -->
-
-    <!--SCRIPTS-->
-    
-    <!--SCRIPTS END-->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-83250250-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
-
 </html>
