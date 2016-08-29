@@ -10,35 +10,36 @@ module.exports = {
   index: function(req, res) {
     res.view();
   },
+
+  hooray: function(req, res) {
+    res.view();
+  },
+
   signup: function(req, res) {
-    var phoneNum = req.param('phoneNum');
-    Friend.findOne({phoneNum: phoneNum}, function(err, usr) {
+    var phoneNum = req.param('tel');
+    Friend.findOne({
+      phoneNum: phoneNum
+    }).exec(function(err, usr) {
       if (err) {
-        res.set('error', 'DB Error');
-        res.send(500, {
-          error: 'DB Error'
-        });
+        req.addFlash('error', 'DB Error 1');
+        return res.redirect('/');
       } else if (usr) {
-        res.set('error', 'Phone number already registered');
-        res.send(400, {
-          error: 'Phone number already registered'
-        });
+        req.addFlash('error', 'Phone number already registered');
+        return res.redirect('/');
       } else {
         Friend.create({
           phoneNum: phoneNum
         }).exec(function(error, phoneNum) {
           if (error) {
-            res.set('error', 'DB Error');
-            res.send(500, {
-              error: 'DB Error'
-            });
+            req.addFlash('error', 'DB error 2');
+            console.log('2');
+            return res.redirect('/');
           } else {
-            req.session.user = phoneNum;
-            res.send(phoneNum);
+            return res.redirect('/hooray');
           }
         });
       }
     });
-  },
+  }
 
 };

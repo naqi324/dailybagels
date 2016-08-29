@@ -28,9 +28,9 @@ var jsFilesToInject = [
   'js/jquery.maskedinput.js',
   'js/bootstrap.min.js',
   'js/modal.js',
-  'js/main.js',
+  'js/main.js'
   // js/dropdown.js,
-  'js/signup.js'
+  // 'js/signup.js'
   // Load sails.io before everything else
   //'js/dependencies/sails.io.js',
 

@@ -1,6 +1,6 @@
 /* @flow */
 $(document).ready(function() {
-  $("#signup").click(function() {
+  $("#signup").submit(function() {
     var phoneNum = $("#phone_us").val();
     $.post(
       '/signup', {

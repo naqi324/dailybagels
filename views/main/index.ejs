@@ -1,5 +1,9 @@
+<% flash.get('error').forEach(function (message) { %>
+    <div class="alert alert-danger">
+      <%= message %>
+    </div>
+<% }) %>
 <div class="level level-hero hero-home has-hint">
-
     <div class="hero-overlay visible-lg"></div>
     <video loop id="bg-video" class="fullscreen-video">
       <source src="/videos/kitty.webm" type="video/webm">
@@ -21,13 +25,15 @@
           </div>
         </div>
       </div>
-      <div class="hint-arrow"></div>
+      <div class="hint-arrow">
+      </div>
     </div>
   </div>
 
   <div class="level level-outro text-center">
     <div class="container">
-      <form class="contact" method="post" action="/" accept-charset="UTF-8">
+
+      <form class="contact" method="post" action="/signup" accept-charset="UTF-8">
         <div class="h2 mb-20" id="signup_dose">Get a daily dose of Bagels.</div>
         <p class="mb-35">Straight to your phone.</p>
         <div class="btn-append">

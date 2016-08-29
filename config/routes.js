@@ -39,10 +39,16 @@ module.exports.routes = {
     action: 'index'
   },
 
-  '/signup' : {
+  'POST /signup' : {
        controller: 'main',
        action: 'signup'
+  },
+
+  '/hooray' : {
+       controller: 'main',
+       action: 'hooray'
   }
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
