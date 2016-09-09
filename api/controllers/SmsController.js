@@ -6,6 +6,8 @@
  */
 
 module.exports = {
-	
-};
+	incoming: function(req, res) {
+		console.log(req.body);
 
+	}
+};
