@@ -52,8 +52,12 @@ module.exports.routes = {
   'POST /ahoyhoy' : {
        controller: 'sms',
        action: 'incoming'
-  }
+  },
 
+  '/thisisdog' : {
+       controller: 'sms',
+       action: 'outgoing'
+  }
 
 
   /***************************************************************************
